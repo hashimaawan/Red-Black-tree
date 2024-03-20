@@ -364,7 +364,6 @@ private:
 
 
                 temp_color = y1->color;
-                //tempptr->color = 1;
                 x1 = y1->left;
 
                 if (y1->up_parent == temp1)
@@ -383,7 +382,6 @@ private:
 
 
                 y1->right = temp1->right;
-                //tempptr->color = 1;
                 y1->right->up_parent = y1;
 
                 y1->color = temp1->color;
@@ -413,10 +411,7 @@ private:
                 {
                     ptr1->color = 0;
                     kptr->up_parent->color = 0;
-                    //   up->parent = up->right;
-                    // 
-                    // 
-                    // recoloring 
+
                     kptr->up_parent->up_parent->color = 1;
 
                    
@@ -470,7 +465,6 @@ private:
                     }
                     kptr->up_parent->color = 0;
 
-                    //   kptr->parent = kptr->right;
                     kptr->up_parent->up_parent->color = 1;
 
                     rightRotationAssignee(kptr->up_parent->up_parent);
@@ -527,7 +521,6 @@ public:
     void searchTree(int k, stringstream& output)
     {
         searchTreeHelper(this->root, k, output);
-        //  return temp;
     }
 
     void shift1(int id1, string id2, NodeTask* node)
@@ -596,8 +589,6 @@ public:
 
         NodeAssignee* child_node = node_at_whichrota->left;
         node_at_whichrota->left = child_node->right;
-
-        //   child->parent = child->right;
 
         if (child_node->right != NULL) 
         {
@@ -816,7 +807,6 @@ private:
                     // Case: both children of sibling are black
                     sptr->color = 1;
 
-                    // x = x->up_parent->up_parent->right;
                     x = x->up_parent;
                 }
                 else 
@@ -826,12 +816,10 @@ private:
 
                         sptr->right->color = 0;
                         sptr->color = 1;
-                        //   sptr->up->parent = sptr;
 
                         leftRotationTasktree(sptr);
                         sptr = x->up_parent->left;
                     }
-                    //   sptr  = sptr->up->parent ;
                     sptr->color = x->up_parent->color;
                     x->up_parent->color = 0;
                     sptr->left->color = 0;
@@ -1078,8 +1066,6 @@ private:
 
                     kptr->up_parent->color = 0;
                     kptr->up_parent->up_parent->color = 1;
-                    // x = x->up_parent->up_parent->right;
-
 
                     kptr = kptr->up_parent->up_parent;
                 }
@@ -1089,9 +1075,6 @@ private:
                     {
 
                         kptr = kptr->up_parent;
-
-
-                        // x = x->up_parent->up_parent->right;
 
                         rightRotationTasktree(kptr);
                     }
@@ -1574,7 +1557,6 @@ public:
                     int taskid = obj->TaskId;
 
                     obj2.deleteNode1(obj->prioritylev);
-                    // obj2.deleteNode(obj->TaskId);
                     inserting_tree(taskid, desc, priorlev, Asid);
                    
                     return;
@@ -1728,8 +1710,7 @@ public:
     void updateTaskPriority(int taskid, int priority_level)
     {
         tasktree.updatePriority(taskid, priority_level, tasktree.root, tasktree);
-        // tasktree.deleteNode(taskid);
-        // tasktree.inserting_tree();
+
     }
     void displayCompletedTasks(stringstream& outp)
     {

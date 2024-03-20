@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-int counter = 1;
+int counter = 1;    // Varaible to assign ID's to each assignee
 class Assignee
 {
 private:

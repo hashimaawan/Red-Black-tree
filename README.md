@@ -1,7 +1,9 @@
 ## Red-Black-tree ##
 Task Management System using Red Black Trees in C++
 
+
 <ins>**REQUIREMENTS**</ins>
+
 
 <ins>Add Assignee</ins>
 Users should be able to add new assignees to the system, providing
@@ -51,6 +53,8 @@ tasks, which can be helpful for generating progress reports.
 Users should be able to search for tasks within a specified
 priority range and display them.
 
+
+
 **2. RED-BLACK Tree Implementation:**
 
 The red-black tree should store task records. Each node in the red-black tree represents a task
@@ -62,6 +66,7 @@ in the system. The node structure of the task tree includes the following fields
     higher priority.
     
 ->Assignee ID: Every Assignee should have a unique ID.
+
 -> Another tree would be created to store the details of Assignee, which would include:
 -> ----First Name
 -> ----Last Name
@@ -69,7 +74,9 @@ in the system. The node structure of the task tree includes the following fields
 -> ----Date of birth: in the format of day/month/year
 -> ----Assignee ID: This will be auto-generated.
 
-**CODE IMPLEMENTATIO**
+
+
+**CODE IMPLEMENTATION**
 Code has been done in c++ according to requirements. It is written in simpler ways with proper comments. If there is
 any query related to code you can contact me at : awanhashim800@gmail.com
 
